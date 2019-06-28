@@ -10,5 +10,11 @@ function addNewElementAsLi(){
   console.log(retrieveEmployeeInformation())
     document.querySelector('ul').append('<li>${retrieveEmployeeInformation()}</li>')
 }
+function addNewLiOnClick(){
+  document.querySelector('input[type=submit]').addEventListener('click', function(){
+    addNewElementAsLi()
+    document.querySelector('ul').innerHTML = ""
+  })
+}
 
 preventRefreshOnSubmit()
